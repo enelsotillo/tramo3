@@ -1,5 +1,6 @@
+import "dotenv/config";
 import express from 'express';
-import { startDb } from './src/config/basededatos.js';
+//import { startDb } from './src/config/basededatos.js';
 
 //const express = require('express')
 
@@ -19,4 +20,5 @@ app.get('/', function (req, res) {
 app.listen(port, () =>{
   console.log(`servidor corriendo http://${host}:${port}`)
  //startDb();
+ console.log(process.env.port)
 })
